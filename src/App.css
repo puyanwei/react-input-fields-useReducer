@@ -9,3 +9,7 @@
   display: inline-block;
   margin: auto;
 }
+
+input {
+  margin-top: 1rem;
+}
