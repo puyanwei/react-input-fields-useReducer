@@ -1,31 +1,24 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { useState } from 'react';
+import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = { value: "" };
-  }
+const App = () => {
+	const [ secret, setSecret ] = useState('');
 
-  handleTextboxValue = event => {
-    this.setState({ value: event.target.value });
-  };
+	const handleTextboxValue = (e) => {
+		setSecret(e.target.value);
+	};
 
-  render() {
-    return (
-      <div className="App">
-        <div className="element">
-          Tell me your darkest secrets!
-          <br />
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleTextboxValue}
-          />
-        </div>
-      </div>
-    );
-  }
-}
+	return (
+		<div className="App">
+			<div className="element">
+				Tell me your darkest secret!
+				<br />
+				<input type="text" value={secret} onChange={(e) => handleTextboxValue(e)} />
+				<br />
+				<h2>Shhh, don't tell anyone but {secret}</h2>
+			</div>
+		</div>
+	);
+};
 
 export default App;
