@@ -1,11 +1,12 @@
 # React Input Field Example
 
-An example of how to grab the data of a text box and add it to your state in React.js
+Updating my [repo](https://github.com/puyanwei/react-input) to use React Hooks, useState and useReducer.
+
 
 ### Installation
 
 ```
-git clone https://github.com/puyanwei/react-input.git
+git clone https://github.com/puyanwei/react-input-fields-useReducer.git
 cd react-input
 npm install
 npm start
